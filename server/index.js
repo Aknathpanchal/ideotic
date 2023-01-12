@@ -16,10 +16,10 @@ const connectionparams = {
   useUnifiedTopology: true,
 };
 
-app.post("/signup", async (req, res) => {
+app.post("/register", async (req, res) => {
   try {
-    let { name, age, email, password } = req.body;
-    if (email == "" || password == "" || name == "" || age == "") {
+    let { name,  email, password } = req.body;
+    if (email == "" || password == "" || name == "" ) {
       return res.status(400).send({
         success: false,
         message: `All fields are required`,
@@ -60,10 +60,8 @@ app.post("/signup", async (req, res) => {
 
     const user = await adminModel.create({
       name: name,
-      age: age,
       email: email.toLowerCase(),
       password: myencpassword,
-      role: "user",
     });
 
     user.password = undefined;

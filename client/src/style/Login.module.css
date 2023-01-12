@@ -1,0 +1,5 @@
+/* Medium screens */
+@media all and (min-width: 651px) and (max-width: 900px) {}
+
+/* Small screens */
+@media all and (min-width: 250px) and (max-width: 650px) {}
