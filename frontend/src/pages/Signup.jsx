@@ -36,7 +36,7 @@ export default function SignupCard() {
 		
 		};
 
-		axios.post("http://localhost:8080/register", obj).then((response) => {
+		axios.post("https://ideotic-production.up.railway.app/register", obj).then((response) => {
 			
 			console.log(response);
 			navigate("/login");

@@ -24,7 +24,7 @@ import {
     //
     function login(email, password) {
       axios
-        .post("http://localhost:8080/login", { email, password })
+        .post("https://ideotic-production.up.railway.app/login", { email, password })
         .then((res) => {
           if (res.data.token) {
             localStorage.setItem("token", res.data.token);
